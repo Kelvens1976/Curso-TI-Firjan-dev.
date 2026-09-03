@@ -2,7 +2,7 @@ import os
 import time 
 
 def limpar_tela():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls' if os.name == 'nt' else 'clear') #'nt' → verifica se o sistema operacional é Windows. Se for Windows → retorna 'cls'. Senão (Linux, macOS etc.) → retorna 'clear'.
 
 limpar_tela() #essa sequencia acima é para deixar a tela mais limpa
 
@@ -20,7 +20,7 @@ while litros != 0: #Se litro diferente de 0 => Verdadeiro e continue, se diferen
 
     valor = litros * preco #Valor gasto = litro x preço
 
-    print("Valor pago pelo cliente: R$", valor) #Vai preeencher automaticamente o valor dado na multiplicação 
+    print(f"Valor pago pelo cliente: R$, {valor:.3f}") #Vai preeencher automaticamente o valor dado na multiplicação 
 
     #Agora abaixo é a condição para que se coloque mais de 1 veículo
 
@@ -44,6 +44,6 @@ print("R E L A T Ó R I O  D O  D I A")
 print("===============================") 
 print("Veículos atendidos:", veiculos) #Vai extrair dados do somátorio da quantidade de veículos
 print("Total de litros vendidos:", total_litros) #Vai extrair dados do somátorio da quantidade total de litros
-print("Total arrecadado: R$", total_arrecadado) #Vai extrair dados do somátorio do total de dinheiro arrecadado
-print("Média de litros por veículo:", media) #Calcula a quantidade de litros abastecido no dia dividido pela quantidade de veículos
+print(f"Total arrecadado: R$ {total_arrecadado:.3f}") #Vai extrair dados do somátorio do total de dinheiro arrecadado
+print(f"Média de litros por veículo: {media:.3f}") #Calcula a quantidade de litros abastecido no dia dividido pela quantidade de veículos
 print("Veículos que abasteceram mais de 40 litros:", mais_40) #Aqui ele computa somente a quantidade de veículos que passaram de 40 litros
